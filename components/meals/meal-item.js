@@ -2,7 +2,7 @@ import classes from "./meal-item.module.css"
 import Image from "next/image"
 import Link from "next/link"
 
-export default function MealItem({title, image, summary, creator, dynamicSeg}){
+export default function MealItem({title, image, summary, creator, slug}){
     return (
         <article className={classes.meal}>
             <header>
@@ -18,7 +18,7 @@ export default function MealItem({title, image, summary, creator, dynamicSeg}){
             <div className={classes.content}>
                 <p className={classes.summary}>{summary}</p>
                 <div className={classes.actions}>
-                    <Link href={`/meals/${dynamicSeg}`}>View Details</Link>
+                    <Link href={`/meals/${slug}`}>View Details</Link>
                 </div>
             </div>
         </article>
